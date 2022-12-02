@@ -10,7 +10,7 @@ function TodoForm(props) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId: context.userId, description: todoDescription })
     }
-    fetch('/addTodo', reqOptions).then(
+    fetch(process.env.REACT_APP_API_URL + '/addTodo', reqOptions).then(
       response => response.json()
     ).then(
       () => {

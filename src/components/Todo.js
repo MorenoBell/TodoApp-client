@@ -11,7 +11,7 @@ function Todo(props) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ todoId: todo._id })
     };
-    fetch('/deleteTodo', requestOptions).then(
+    fetch(process.env.REACT_APP_API_URL + '/deleteTodo', requestOptions).then(
       response => response.json()
     ).then(
       data => {
@@ -30,7 +30,7 @@ function Todo(props) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ todoId: todo._id })
     };
-    fetch('/changeTodoState', requestOptions).then(
+    fetch(process.env.REACT_APP_API_URL + '/changeTodoState', requestOptions).then(
       response => response.json()
     ).then(
       data => {

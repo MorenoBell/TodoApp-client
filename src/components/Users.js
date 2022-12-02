@@ -8,7 +8,7 @@ function Users(props) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({})
     };
-    fetch('/allUsers', requestOptions).then(
+    fetch(process.env.REACT_APP_API_URL + '/allUsers', requestOptions).then(
       response => response.json()
     ).then(
       data => {

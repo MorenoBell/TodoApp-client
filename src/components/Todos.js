@@ -12,7 +12,7 @@ function Todos() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId: context.userId })
     };
-    fetch('/getTodosByUser', requestOptions).then(
+    fetch(process.env.REACT_APP_API_URL + '/getTodosByUser', requestOptions).then(
       response => response.json()
     ).then(
       data => {

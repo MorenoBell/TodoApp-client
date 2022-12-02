@@ -27,7 +27,7 @@ function LoginForm() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username: username, password: password })
     };
-    return fetch('/loginUser', requestOptions);
+    return fetch(process.env.REACT_APP_API_URL + '/loginUser', requestOptions);
   }
   return (
     <div className='bg-gradient-to-r from-slate-800 via-slate-700 to-slate-600 h-screen box-shadow px-10 py-10 place-content-center'>

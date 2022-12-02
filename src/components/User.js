@@ -8,7 +8,7 @@ function User(props) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId: id })
     };
-    fetch('/deleteUser', requestOptions).then(
+    fetch(process.env.REACT_APP_API_URL + '/deleteUser', requestOptions).then(
       response => response.json()
     ).then(props.getAllUsers)
   }
