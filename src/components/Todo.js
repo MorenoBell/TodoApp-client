@@ -10,7 +10,7 @@ function Todo(props) {
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ todoId: todo._id })
+      body: JSON.stringify({ todoId: todo._id, userId: context.userId })
     };
     fetch(process.env.REACT_APP_API_URL + '/deleteTodo', requestOptions).then(
       response => response.json()
