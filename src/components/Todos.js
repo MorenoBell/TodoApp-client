@@ -26,8 +26,8 @@ function Todos() {
   return (
     <div className='bg-gradient-to-r from-slate-800 via-slate-700 to-slate-600 min-h-screen box-shadow px-10 py-10 place-content-center'>
       <div className='flex justify-between mb-5'>
-        <button type='button' className='text-white hover:bg-emerald-600 border-solid border-2 rounded-lg py-3 px-6' onClick={() => setTodoFormVisible(!todoFormVisible)}>{todoFormVisible ? 'go back' : 'new todo'}</button>
-        <button type='button' className='text-white hover:bg-emerald-600 border-solid border-2 rounded-lg py-3 px-6' onClick={() => context.logout()}>Logout</button>
+        <button type='button' className='text-white border-solid border-2 rounded-lg py-3 px-6' onClick={() => setTodoFormVisible(!todoFormVisible)}>{todoFormVisible ? 'go back' : 'new todo'}</button>
+        <button type='button' className='text-white border-solid border-2 rounded-lg py-3 px-6' onClick={() => context.logout()}>Logout</button>
       </div>
       {
         <div className='h-auto flex flex-col md:mx-12 relative bg-slate-800 w-auto md:px-16 px-4 py-12 rounded-3xl lg:mx-64 xl:mx-72 2xl:mx-96 grid-rows-3'>
