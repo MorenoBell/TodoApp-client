@@ -52,7 +52,7 @@ function Todo(props) {
     }
   }
   return (
-    <div onClick={todoChange} className={`text-white mt-3 ${backGroundColor} hover:bg-emerald-800  rounded-xl border-solid border-2 px-5 py-2.5 justify-between flex text-xl font-semibold text-start border-slate-500`}>
+    <div onClick={todoChange} className={`text-white mt-3 ${backGroundColor} rounded-xl border-solid border-2 px-5 py-2.5 justify-between flex text-xl font-semibold text-start border-slate-500`}>
       <span>{todo.description}</span>
       <div className='flex'>
         <input type="checkbox" className="checked:bg-slate-900 rounded-full accent-emerald-500" onChange={todoCheckChange} checked={todoState} />
