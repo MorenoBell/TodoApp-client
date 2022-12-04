@@ -4,8 +4,8 @@ import React, { useContext, useState } from 'react'
 function Todo(props) {
   const context = useContext(ThemeContext);
   const todo = props.todo;
-  const [backGroundColor, setBackGroundColor] = useState('bg-slate-900');
   const [todoState, setTodoState] = useState(todo.checked)
+  const [backGroundColor, setBackGroundColor] = useState(todoState ? 'bg-emerald-800' : 'bg-slate-900');
   const deleteTodo = () => {
     const requestOptions = {
       method: 'POST',
