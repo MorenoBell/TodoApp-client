@@ -77,8 +77,8 @@ function Todo(props) {
       font-bold md:w-1/12 place-self-center md:mt-auto mt-3 rounded-xl cursor-pointer bg-slate-900' type='button' onClick={modifyTodo}><i className='fa-solid p-4 fa-check'></i></button>
         </div>
         :
-        <div /*onClick={todoChange}*/ onDoubleClick={() => setEditing(true)} onTouchEnd={touchEnd} onTouchStart={touchStart} className={`text-white w-auto flex-wrap md:flex-row flex-col mt-3 ${backGroundColor} rounded-xl border-solid border-2 px-5 py-2.5  justify-between flex text-xl font-semibold text-start border-slate-500`}>
-          <span className='place-self-center'>{todoDescription}</span>
+        <div /*onClick={todoChange}*/ onDoubleClick={() => setEditing(true)} onTouchEnd={touchEnd} onTouchStart={touchStart} className={`text-white w-auto md:flex-row flex-col mt-3 ${backGroundColor} rounded-xl border-solid border-2 px-5 py-2.5  justify-between flex text-xl font-semibold text-start border-slate-500`}>
+          <span className='break-words'>{todoDescription}</span>
           <div className='flex justify-evenly'>
             <button type="checkbox" className="checked:bg-slate-900 rounded-full accent-emerald-500" onClick={todoChange}>{todoIcon}</button>
             <button onClick={props.deleteTodo.bind(null, todo._id)} className='ml-5 accent-emerald-500'>{<i className="fa-solid accent-emerald-500 fa-trash"></i>}</button>
