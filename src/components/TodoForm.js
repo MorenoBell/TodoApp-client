@@ -14,16 +14,16 @@ function TodoForm(props) {
       response => response.json()
     ).then(
       () => {
-        props.setTodoFormVisible(false);
         props.getTodosByUser();
+        props.setTodoFormVisible(false);
       }
     )
   }
   return (
     <>
       <input value={todoDescription} onChange={(e) => setTodoDescription(e.target.value)} placeholder='todo' className='bg-slate-900 md:w-4/5 mt-5 text-center
-       place-self-center text-white rounded-xl border-solid border-2 border-slate-500 font-bold py-4 px-5 text-xl' autoFocus type={"text"}></input>
-      <button className='hover:bg-emerald-600 text-white  text-xl  border-solid border-2
+       place-self-center text-white rounded-xl border-solid border-2 border-slate-500 font-bold py-4 px-5 md:text-xl' autoFocus type={"text"}></input>
+      <button className='hover:bg-emerald-600 text-white  md:text-xl  border-solid border-2
       font-bold py-5 px-4 md:w-2/5 place-self-center mt-10 rounded-xl bg-slate-900' type='button' onClick={addTodo}>add todo</button>
     </>
   )
